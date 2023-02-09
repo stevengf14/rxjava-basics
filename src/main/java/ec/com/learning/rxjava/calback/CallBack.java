@@ -6,6 +6,10 @@ package ec.com.learning.rxjava.calback;
  */
 public interface CallBack {
 
-    void call();
+    void pushData(String data);
+
+    void pushComplete();
+
+    void pushError(Exception ex);
 
 }

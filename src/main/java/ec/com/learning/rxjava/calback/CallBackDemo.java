@@ -1,5 +1,7 @@
 package ec.com.learning.rxjava.calback;
 
+import javax.management.RuntimeErrorException;
+
 /**
  *
  * @author Steven Guamán - February 2023
@@ -14,8 +16,18 @@ public class CallBackDemo {
             public void run() {
                 new CallBackDemo().runningAsync(new CallBack() {
                     @Override
-                    public void call() {
-                        System.out.println("CallBack called!");
+                    public void pushData(String data) {
+                        System.out.println("CallBack data: " + data);
+                    }
+
+                    @Override
+                    public void pushComplete() {
+                        System.out.println("CallBack done!");
+                    }
+
+                    @Override
+                    public void pushError(Exception ex) {
+                        System.out.println("CallBack Error called, Got an Exception: " + ex.getMessage());
                     }
 
                 });
@@ -34,7 +46,13 @@ public class CallBackDemo {
     public void runningAsync(CallBack callback) {
         System.out.println("I'm running in saperate thread");
         sleep(1000);
-        callback.call();
+        callback.pushData("Data1");
+        callback.pushData("Data2");
+        callback.pushData("Data3");
+        callback.pushData("Data4");
+
+        callback.pushError(new RuntimeException("Ooops!"));
+        callback.pushComplete();
     }
 
     private void sleep(int duration) {
