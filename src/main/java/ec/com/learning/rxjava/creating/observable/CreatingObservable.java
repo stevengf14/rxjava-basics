@@ -1,4 +1,4 @@
-package ec.com.learning.rxjava.observable;
+package ec.com.learning.rxjava.creating.observable;
 
 import io.reactivex.rxjava3.annotations.NonNull;
 import io.reactivex.rxjava3.core.Observable;
