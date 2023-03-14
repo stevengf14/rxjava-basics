@@ -18,6 +18,7 @@ public class ColdObservables {
 
         Observable<Integer> source = Observable.fromIterable(list);
         source.subscribe(System.out::println);
+        
         list = getData(list);
         source.subscribe(System.out::println);
     }
@@ -26,4 +27,6 @@ public class ColdObservables {
         list.add(19);
         return list;
     }
+    
+    // Hot
 }
