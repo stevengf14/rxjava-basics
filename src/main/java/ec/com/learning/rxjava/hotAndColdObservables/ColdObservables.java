@@ -1,4 +1,4 @@
-package ec.com.learning.rxjava.calback.hotAndColdObservables;
+package ec.com.learning.rxjava.hotAndColdObservables;
 
 import io.reactivex.rxjava3.core.Observable;
 import java.util.ArrayList;
