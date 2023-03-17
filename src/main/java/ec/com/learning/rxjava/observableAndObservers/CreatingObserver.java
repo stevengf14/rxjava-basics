@@ -1,4 +1,4 @@
-package ec.com.learning.rxjava.creating.observer;
+package ec.com.learning.rxjava.observableAndObservers;
 
 import io.reactivex.rxjava3.core.Observable;
 

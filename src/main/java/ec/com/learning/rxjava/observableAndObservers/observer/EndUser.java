@@ -1,4 +1,4 @@
-package ec.com.learning.rxjava.observer;
+package ec.com.learning.rxjava.observableAndObservers.observer;
 
 /**
  *
