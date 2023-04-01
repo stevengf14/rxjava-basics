@@ -1,0 +1,29 @@
+package ec.com.learning.rxjava.subjectsReplayingAndCaching;
+
+import io.reactivex.rxjava3.annotations.NonNull;
+import io.reactivex.rxjava3.core.Observable;
+import java.util.concurrent.TimeUnit;
+
+/**
+ *
+ * @author Steven Guamán - March 2023
+ */
+public class Replaying {
+
+    public static void main(String[] args) throws InterruptedException {
+
+        @NonNull
+        Observable<@NonNull Long> src = Observable.interval(1, TimeUnit.SECONDS)
+                .replay(2, 4, TimeUnit.SECONDS)
+                .autoConnect();
+
+        src.subscribe(e -> System.out.println("Observable 1: " + e));
+
+        Thread.sleep(5000);
+
+        src.subscribe(e -> System.out.println("Observable 2: " + e));
+
+        Thread.sleep(5000);
+    }
+
+}
