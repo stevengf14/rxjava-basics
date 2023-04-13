@@ -7,15 +7,16 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
  *
  * @author Steven Guamán - April 2023
  */
-public class SubscribeOn {
+public class ObserveOn {
 
     public static void main(String[] args) throws InterruptedException {
 
         Observable.just("Pasta", "Pizza", "Fries", "Curry", "Chow mein")
                 .subscribeOn(Schedulers.computation())
                 .map(e -> e.toUpperCase())
-                .subscribeOn(Schedulers.newThread())
+                .doOnNext(e-> System.out.println(Thread.currentThread().getName()))
                 .filter(e -> e.startsWith("P"))
+                .observeOn(Schedulers.io())
                 .subscribe(e -> print(e));
 
         Thread.sleep(6000);
