@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 /**
  *
- * @author steve
+ * @author Steven Guamán - April 2023
  */
 public class ObservingTheStream {
 
