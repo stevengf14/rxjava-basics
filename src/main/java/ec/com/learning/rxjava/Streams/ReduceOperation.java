@@ -4,7 +4,7 @@ import java.util.stream.Stream;
 
 /**
  *
- * @author Steven Guamán - April 2023
+ * @author Steven Guamán - May 2023
  */
 public class ReduceOperation {
 
@@ -16,7 +16,7 @@ public class ReduceOperation {
         // 0+9=9 sun
         // 1*8=0 multiplication
         System.out.println(sum);
-
+        
     }
 
 }
