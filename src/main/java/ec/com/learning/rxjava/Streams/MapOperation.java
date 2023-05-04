@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 /**
  *
- * @author Steven Guamán - April 2023
+ * @author Steven Guamán - May 2023
  */
 public class MapOperation {
 
