@@ -16,6 +16,7 @@ public class Calculations {
         //IntStream
         //DoubleStream
         //LongStream
+        
         //Sum
         int sum = IntStream.of(1, 2, 3)
                 .sum();
